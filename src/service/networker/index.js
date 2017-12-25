@@ -947,6 +947,7 @@ export class NetworkerThread {
         this.ackMessage(messageID)
 
         // console.log('Update', message)
+        this.emit('update', message);
         if (updatesProcessor) updatesProcessor(message, true)
         break
       }
